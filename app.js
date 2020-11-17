@@ -69,11 +69,9 @@ function closeModal() {
  if (e.target === modal ) {
   closeModal()
   }
- 
-  
-  // console.log(e.target)
-   
- })
+})
+
+$(".slider-block").slick()
  
 
 
@@ -81,6 +79,5 @@ function closeModal() {
 
 
   
-  
-  // console.log(e)
+
 

@@ -515,6 +515,14 @@ sub{
 .hide {
 	display: none;
 }
+.slider-block > div{
+
+	font-size: 50px;
+	text-align: center;
+	padding: 150px 0;
+	color: #ffffff;
+
+}
 
 
 
