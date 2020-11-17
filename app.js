@@ -1,3 +1,4 @@
+"use strict"
 // add to cart
 let productCountEl = document.getElementById('product-count')
 let addToCartButtons = document.querySelectorAll('.add-cart')
@@ -12,21 +13,51 @@ for (let i = 0; i < addToCartButtons.length; i++) {
 
 // change like
 
-let moreDetails = document.querySelectorAll('.more-detailis')
+// let iconLike = document.querySelectorAll('.icon-like')
 let likeProd = document.querySelectorAll('.icon-like')
 
-for (let i = 0; i < moreDetails.length; i++) {
+for (let i = 0; i < likeProd.length; i++) {
 
-   moreDetails[i].addEventListener("click",function() {
+  likeProd[i].addEventListener("click",function(e) {
 
-     likeProd[i].classList.toggle("chicked")
+    //  likeProd[i].classList.toggle("liked")
 
-     if (likeProd[i].classList.contains("chicked") === true) {
-      likeProd[i].style.backgroundColor = "#3366cc"
-      likeProd[i].style.backgroundImage = "url(img/likeicon1.png)"
-     }else{
-      likeProd[i].style.backgroundImage = "url(img/likeicon.png)"
-      likeProd[i].style.backgroundColor = "inherit"
-     }
+    //  if (likeProd[i].classList.contains("liked") === true) {
+    //   likeProd[i].style.backgroundColor = "#3366cc"
+    //   likeProd[i].style.backgroundImage = "url(img/likeicon1.png)"
+    //  }else{
+    //   likeProd[i].style.backgroundImage = "url(img/likeicon.png)"
+    //   likeProd[i].style.backgroundColor = "inherit"
+    //  }
+    let item = e.target
+    console.log(item)
+
+    if (item.classList.contains("liked")) {
+      item.classList.remove("liked")
+    }else {
+      item.classList.add("liked")
+    }
+
    })
 }
+
+//modal
+
+
+  let moreDetailsButtons = document.querySelectorAll(".more-detailis")
+  let modal = document.querySelector(".modal")
+  let closeBtn = document.querySelector(".btn-close")
+  moreDetailsButtons.forEach(function(btn) {
+    btn.addEventListener("click",function() {
+      modal.classList.add("show")
+      modal.classList.remove("hide")
+    })
+  })
+  closeBtn.addEventListener("click",function() {
+    modal.classList.add("hide")
+    modal.classList.remove("show")
+  })
+  
+  
+  console.log(moreDetailsButtons)
+
