@@ -47,17 +47,38 @@ for (let i = 0; i < likeProd.length; i++) {
   let moreDetailsButtons = document.querySelectorAll(".more-detailis")
   let modal = document.querySelector(".modal")
   let closeBtn = document.querySelector(".btn-close")
+
   moreDetailsButtons.forEach(function(btn) {
-    btn.addEventListener("click",function() {
-      modal.classList.add("show")
-      modal.classList.remove("hide")
-    })
+    btn.addEventListener("click",openModal)
   })
-  closeBtn.addEventListener("click",function() {
+
+  closeBtn.addEventListener("click",closeModal)
+
+function closeModal() {
     modal.classList.add("hide")
     modal.classList.remove("show")
-  })
+ }
+
+ function openModal() {
+  modal.classList.add("show")
+  modal.classList.remove("hide")
+ }
+
+ modal.addEventListener("click",function (e) {
+
+  modal.classList.remove("show")
+ 
+  
+  // console.log(e.target)
+   
+ })
+ 
+
+
+
+
+
   
   
-  console.log(moreDetailsButtons)
+  // console.log(e)
 
