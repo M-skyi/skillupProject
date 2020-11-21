@@ -20,15 +20,6 @@ for (let i = 0; i < likeProd.length; i++) {
 
   likeProd[i].addEventListener("click",function(e) {
 
-    //  likeProd[i].classList.toggle("liked")
-
-    //  if (likeProd[i].classList.contains("liked") === true) {
-    //   likeProd[i].style.backgroundColor = "#3366cc"
-    //   likeProd[i].style.backgroundImage = "url(img/likeicon1.png)"
-    //  }else{
-    //   likeProd[i].style.backgroundImage = "url(img/likeicon.png)"
-    //   likeProd[i].style.backgroundColor = "inherit"
-    //  }
     let item = e.target
     console.log(item)
 
@@ -71,7 +62,12 @@ function closeModal() {
   }
 })
 
-$(".slider-block").slick()
+$(".slider-block").slick({
+  dots:true,
+  arrows:true,
+  autoplay:false,
+
+})
  
 
 

@@ -523,6 +523,71 @@ sub{
 	color: #ffffff;
 
 }
+.slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 15px;
+    height: 15px;
+    padding: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+    background: transparent;
+    border: 2px solid white;
+}
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    content: '';
+	text-align: center;
+	font-size: 10px;
+}
+.slick-dots li.slick-active button:before {
+    opacity: 100;
+    width: 13px;
+    height: 13px;
+    background-color: white;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+.slick-next,.slick-prev {
+	right: 0px;
+	
+}
+.slick-prev {
+	left: 0px;
+	display: block;
+    border-left: 2px solid #f5f1f1;
+    border-bottom: 2px solid #f7f3f3;
+    height: 34px;
+    width: 34px;
+    transform: rotate(45deg);
+    margin-top: -17px;
+}
+.slick-next {
+	right: 0px;
+	display: block;
+    border-right: 2px solid #f9f6f6;
+    border-top: 2px solid #f9f7f7;
+    height: 35px;
+    width: 35px;
+	transform: rotate(45deg);
+	margin-top: -17px;
+}
+.slick-prev:before {
+    content: '';
+}
+.slick-next:before {
+    content: '';
+}
+
 
 
 
